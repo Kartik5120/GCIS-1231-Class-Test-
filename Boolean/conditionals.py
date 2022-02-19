@@ -5,23 +5,34 @@
 # >=  0 -> F
 
 # Stub
-"""def convert_mark_to_grade(mark):
-    return None"""
+#def convert_mark_to_grade(mark):
+#    return None
+
+print("/n","Welcome to the mark converter")
 
 def convert_mark_to_grade(mark):
     #if mark < 0 or mark > 100:
     #    return None
+    grade = None
     if mark >= 0 and mark <= 100:
         if mark < 60:
-            return "F"
+            grade = "F"
         elif mark < 70:
-            return "D"
+            grade = "D"
         elif mark < 80:
-            return "C"
+            grade = "C"
         elif mark < 90:
-            return "B"
+            grade = "C"
         else:
             return "A" 
     else: 
         print("Invalid Input")
         return None
+    
+    return grade
+
+def main():
+    result = convert_mark_to_grade(100)
+    print(result)
+
+main()
