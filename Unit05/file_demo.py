@@ -1,16 +1,17 @@
+
 def read_file():
-    # in_file = open("data\input.txt")                  # relative path 
-    with open("data\input.txt") as in_file:
+    # in_file = open("data\input.txt")                  # RELATIVE PATH
+    with open("data\input2.txt") as in_file:
         print(type(in_file))
-        # in_file = open("C:\\Users\\Karti\\GCIS123\\Unit05\\data\\input.txt")          # absolute path
+        # in_file = open("C:\\Users\\Karti\\GCIS123\\Unit05\\data\\input.txt")          # ABSOLUTE PATH
         #read
         for line in in_file:
-            line = line.strip()                         # removes all whitespace (tabs, spaces and newlines)
-            print(line)                                 # from beginning to end of line
+            line = line.strip()                         # REMOVES ALL WHITSPACES (TABS, SPACES AND NEWLINES)
+            print(line)                                 # FROM BEGINNING TO END OF THE LINE
         #data processing
 
 def write_file():
-    with open("data\output.txt", "a") as out_file:      # relative path 
+    with open("data\output.txt", "a") as out_file:      # RELATIVE PATH
         out_file.write("Hello\n")
         out_file.write("World")
         out_file.write("\n")
@@ -18,15 +19,28 @@ def write_file():
         out_file.close()
 
 def read_csv_file():
+    print(" ")
     with open("data\grades.csv") as in_file:
+        sum = 0
+        count = 0
         next(in_file)                                   # SKIPPING THE HEADER LINE
         #read
         for line in in_file:
+            count += 1
             line = line.strip()                         # REMOVES ALL WHITSPACES (TABS, SPACES AND NEWLINES)
-            tokens = line.split(",")                    # FORM BEGINNING TO END OF THE LINE
+            tokens = line.split(",")                    # FROM BEGINNING TO END OF THE LINE
             final = int(tokens[4])
-            print(type(final))
-        #data processing
+            #data processing
+            sum += final 
+            print("The running total is: ", sum)
+            #sum (426) and provide average (85.2) final exam mark
+                
+        print(" ")
+        print("Count is: ", count)
+        print("Final sum is: ", sum)
+        average = sum/count
+        print("Average is: ", average)
+        print(" ")
 
 def main():
     # read_file()

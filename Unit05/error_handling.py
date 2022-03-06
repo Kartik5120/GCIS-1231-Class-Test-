@@ -8,13 +8,14 @@ def test_error_handling():
         print(" ")
         print("Plese remember to enter integers only")
         print(" ")
-    except ZeroDivisionError:
-        print("Your denominator must not be zero")
+    except (ArithmeticError, ZeroDivisionError):
+        print("Arthimetic error occured. Your denominator must not be zero")
         print(" ")
     else: 
         print("No exception was raised! ")
+    finally:
+        print("When an exception occurs, this will still execute")
 
-    print("Answer: ", division)
     print("The code dosen't crash!")
     print(" ")
 
