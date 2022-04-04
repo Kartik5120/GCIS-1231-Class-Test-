@@ -20,27 +20,34 @@ def write_file():
 
 def read_csv_file():
     print(" ")
-    with open("data\grades.csv") as in_file:
-        sum = 0
-        count = 0
-        next(in_file)                                   # SKIPPING THE HEADER LINE
-        #read
-        for line in in_file:
-            count += 1
-            line = line.strip()                         # REMOVES ALL WHITSPACES (TABS, SPACES AND NEWLINES)
-            tokens = line.split(",")                    # FROM BEGINNING TO END OF THE LINE
-            final = int(tokens[4])
-            #data processing
-            sum += final 
-            print("The running total is: ", sum)
-            #sum (426) and provide average (85.2) final exam mark
-                
-        print(" ")
-        print("Count is: ", count)
-        print("Final sum is: ", sum)
-        average = sum/count
-        print("Average is: ", average)
-        print(" ")
+    try:
+        with open("data\grades.csv") as in_file:
+            sum = 0
+            count = 0
+            next(in_file)                                   # SKIPPING THE HEADER LINE
+            #read
+            for line in in_file:
+                count += 1
+                line = line.strip()                         # REMOVES ALL WHITSPACES (TABS, SPACES AND NEWLINES)
+                tokens = line.split(",")                    # FROM BEGINNING TO END OF THE LINE
+                try:
+                    final = int(tokens[4])
+                except ValueError: 
+                    print("A value error has occured in the file. Please review your input file")
+                #data processing
+                print(tokens[5])                            # ADDRESS (PART OF ADDRESS)
+                sum += final 
+                print("The running total is: ", sum)
+                #sum (426) and provide average (85.2) final exam mark
+                    
+            print(" ")
+            print("Count is: ", count)
+            print("Final sum is: ", sum)
+            average = sum/count
+            print("Average is: ", average)
+            print(" ")
+    except FileNotFoundError:
+        print("The input file name is invalid.")
 
 def main():
     # read_file()

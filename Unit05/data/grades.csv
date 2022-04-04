@@ -1,6 +1,6 @@
-Last Name,First Name,Lab Avg,Exam Avg.,Final Exam
-Foell,Endre,94,81,100
-Xang,Katiria,95,100,100
-Lobasso,Sion,97,86,62
-Ferriola,Jeane,100,83,90
-Dunbar,Talitha,97,72,74
+Last Name,First Name,Lab Avg,Exam Avg.,Final Exam, Address
+Foell,Endre,94,81,100, "123 Silicon, Dubai 1234"
+Xang,Katiria,95,100,100, "222 Oud Mehta, Dubai 1223"
+Lobasso,Sion,97,86,62, "321 Karama, Dubai 5673"
+Ferriola,Jeane,100,83,90, "987 Jebal Ali, Dubai 6666"
+Dunbar,Talitha,97,72,74, "778 Burjuman, Dubai 7799"

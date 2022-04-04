@@ -16,6 +16,7 @@ def test_create_arrays():
 def process_array_data():
     marks_array = arrays.Array(10, 0.0)
     length = len(marks_array)
+    print(" ")
     print(length)
     for i in range(length):                     # loops from 0 to 9
         marks_array[i] = i*2                    # Changing the values of each slot to 9.9 
@@ -26,5 +27,6 @@ def main():
     # test_create_arrays()
     input_array = process_array_data()
     print("This is the array in main: ", input_array)
+    print(" ")
 
 main()
