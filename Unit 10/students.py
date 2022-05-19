@@ -14,31 +14,25 @@ class student:
         self.total_credits = new_credits
 
     # METHOD TO PRINT ALL OFF THE STUDENT'S DATA ATTRIBUTES
-    def print_students(self):
-        
-
-        return None
+    def print_student_info(self):
+        print(" ID is: ", self.id, "\n", "Name is: ", self.name, "\n", "GPA is: ", self.gpa, "\n", "Credits are: ", self.total_credits)
 
 def main():
 
     print("")
     print("Student 1:-")
-    obj1 = student()                    #Instataite the class to create an object
-    print("The current GPA for Student1 is: ", obj1.gpa)
-    obj1.set_gpa(4.0)
-    print("The new GPA for Student1 is: ", obj1.gpa)
+    obj1 = student()                    # Instataite the class to create an object
+    # obj1.set_gpa(4.0)
+    student.set_gpa(obj1, 4.0)          # Identical to the line above in the outcome
     obj1.set_total_credits(100)
-    print("The total credits of Student1 is: ", obj1.total_credits)
+    obj1.print_student_info()
 
     print(" ")
     print("Student2 :-")
-    obj2 = student()                    #Instataite the class to create an object
-    print("The current GPA for Student2 is: ", obj2.gpa)
+    obj2 = student()                    # Instataite the class to create an object
     obj2.set_gpa(3.0)
-    print("The new GPA for Student2 is: ", obj2.gpa)
     obj2.set_total_credits(50)
-    print("The total credits of Student2 is: ", obj2.total_credits)
-
+    obj2.print_student_info()
     print("")
 
 main()
